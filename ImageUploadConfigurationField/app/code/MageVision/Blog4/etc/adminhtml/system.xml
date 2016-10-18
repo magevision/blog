@@ -16,17 +16,17 @@
         <tab id="magevision" translate="label" sortOrder="1000">
             <label>MageVision Blog Posts</label>
         </tab>
-        <section id="blog4" translate="label" type="text" sortOrder="1009" showInDefault="1" showInWebsite="1" showInStore="1">
-            <label>Blog 4</label>
+        <section id="blog" translate="label" type="text" sortOrder="1009" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Post 4</label>
             <tab>magevision</tab>
             <resource>MageVision_Blog4::blog4_configuration</resource>
-            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="post4" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
                 <field id="image_upload" translate="label" type="image" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Image Upload</label>
                     <!-- Backend model which saves uploaded files on a defined directory path -->
                     <backend_model>MageVision\Blog4\Model\Config\Backend\Image</backend_model>
-                    <base_url type="media" scope_info="1">blog41q/image</base_url>
+                    <base_url type="media" scope_info="1">blog/post4</base_url>
                     <!-- Comment about allowed extensions of uploaded files which are defined in the backend model -->
                     <comment><![CDATA[Allowed file types: jpg, jpeg, gif, png, svg]]></comment>
                 </field>
