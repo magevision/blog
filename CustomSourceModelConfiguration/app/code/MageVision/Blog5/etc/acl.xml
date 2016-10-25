@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageVision Blog5
+ *
+ * @category     MageVision
+ * @package      MageVision_Blog5
+ * @author       MageVision Team
+ * @copyright    Copyright (c) 2016 MageVision (https://www.magevision.com)
+ * @license      http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="MageVision_Blog5::blog5_configuration" title="MageVision Blog Post 5 Section" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
