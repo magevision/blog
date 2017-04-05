@@ -1,0 +1,44 @@
+<div class="field gender<?php if ($block->isRequired()) echo ' required' ?>">
+    <label class="label" for="<?php /* @escapeNotVerified */ echo $block->getFieldId('gender')?>">
+        <span><?php /* @escapeNotVerified */ echo __('Gender') ?></span>
+    </label>
+    <div class="control">
+        <?php $options = $block->getGenderOptions(); ?>
+        <?php $value = $block->getGender(); ?>
+        <?php foreach ($options as $option): ?>
+            <?php if(!$option->getValue()) continue; ?>
+            <div class="field choice">
+                <input type="radio"
+                       class="radio"
+                       id="gender-option-<?php /* @escapeNotVerified */ echo $option->getValue() ?>"
+                    <?php if ($block->isRequired()) echo 'data-validate="{\'validate-one-required-by-name\':true}"'?>
+                       name="<?php /* @escapeNotVerified */ echo $block->getFieldName('gender')?>"
+                       data-selector="<?php /* @escapeNotVerified */ echo $block->getFieldName('gender')?>"
+                    <?php if ($option->getValue() == $value) echo ' checked="checked"' ?>
+                       value="<?php /* @escapeNotVerified */ echo $option->getValue() ?>"/>
+                <label class="label"
+                       for="gender-option-<?php /* @escapeNotVerified */ echo $option->getValue() ?>">
+                    <span><?php /* @escapeNotVerified */ echo $option->getLabel() ?></span>
+                </label>
+            </div>
+        <?php endforeach;?>
+        <div id="gender-option-error-message-container"></div>
+    </div>
+</div>
+<script>
+    require([
+        "jquery",
+        "mage/mage"
+    ], function($){
+        var dataForm = $('#form-validate');
+        dataForm.mage('validation', {
+            errorPlacement: function(error, element) {
+                if (element.attr('data-validate') && element.attr('data-validate').indexOf('validate-one-required-by-name') >= 0) {
+                    error.appendTo('#gender-option-error-message-container');
+                } else {
+                    element.after(error);
+                }
+            },
+        });
+    });
+</script>
