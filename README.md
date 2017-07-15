@@ -1,2 +1,2 @@
 # MageVision Blog
-Files related to our [blog] (https://www.magevision.com/blog/) posts.
+Files related to our [a blog] (https://www.magevision.com/blog/) posts.
