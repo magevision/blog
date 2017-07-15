@@ -18,8 +18,8 @@
     <div class="product-item-inner">
         <div class="product-item-name-block">
             <strong class="product-item-name" data-bind="text: $parent.name"></strong>
-            <!-- ko if: ($parent.manufacturer)-->
-                <strong class="product-item-manufacturer" data-bind="text: $parent.manufacturer"></strong>
+            <!-- ko if: (getManufacturer($parent))-->
+                <strong class="product-item-manufacturer" data-bind="text: getManufacturer($parent)"></strong>
             <!-- /ko -->
             <div class="details-qty">
                 <span class="label"><!-- ko i18n: 'Qty' --><!-- /ko --></span>

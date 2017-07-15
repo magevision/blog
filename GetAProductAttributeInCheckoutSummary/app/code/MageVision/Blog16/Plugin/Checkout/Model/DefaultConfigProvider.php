@@ -35,13 +35,10 @@ class DefaultConfigProvider
         array $result
     ) {
         $items = $result['totalsData']['items'];
-        for ($i = 0; $i < count($items); $i++){
-            $quoteItem = $this->checkoutSession->getQuote()->getItemById($items[$i]['item_id']);
-            $items[$i]['manufacturer'] = $quoteItem->getProduct()->getAttributeText('manufacturer');
+        foreach ($items as $index => $item) {
+            $quoteItem = $this->checkoutSession->getQuote()->getItemById($item['item_id']);
+            $result['quoteItemData'][$index]['manufacturer'] = $quoteItem->getProduct()->getAttributeText('manufacturer');
         }
-
-        $result['totalsData']['items'] = $items;
-
         return $result;
     }
 }
