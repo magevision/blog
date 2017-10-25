@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageVision Blog22
+ *
+ * @category     MageVision
+ * @package      MageVision_Blog22
+ * @author       MageVision Team
+ * @copyright    Copyright (c) 2017 MageVision (https://www.magevision.com)
+ * @license      http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="checkout.cart.shipping">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">MageVision_Blog22::cart/shipping.phtml</argument>
+            </action>
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="block-summary" xsi:type="array">
+                            <item name="config" xsi:type="array">
+                                <item name="componentDisabled" xsi:type="boolean">true</item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
