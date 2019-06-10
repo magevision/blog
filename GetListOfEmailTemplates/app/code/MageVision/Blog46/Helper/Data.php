@@ -26,21 +26,21 @@ class Data extends AbstractHelper
     /**
      * @var Config
      */
-    protected $emailConfig;
+    protected $emailTemplateConfig;
 
     /**
      * @param Context $context
      * @param CollectionFactory $collectionFactory
-     * @param Config $emailConfig
+     * @param Config $emailTemplateConfig
      */
     public function __construct(
         Context $context,
         CollectionFactory $collectionFactory,
-        Config $emailConfig
+        Config $emailTemplateConfig
     ) {
         parent::__construct($context);
         $this->collectionFactory = $collectionFactory;
-        $this->emailConfig = $emailConfig;
+        $this->emailTemplateConfig = $emailTemplateConfig;
     }
 
     /**
@@ -60,7 +60,7 @@ class Data extends AbstractHelper
      */
     public function getConfigTemplates()
     {
-        return $this->emailConfig->getAvailableTemplates();
+        return $this->emailTemplateConfig->getAvailableTemplates();
     }
 }
 
