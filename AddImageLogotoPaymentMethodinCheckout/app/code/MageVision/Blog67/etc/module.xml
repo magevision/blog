@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageVision Blog67
+ *
+ * @category    MageVision
+ * @package     MageVision_Blog67
+ * @author      MageVision Team
+ * @copyright   Copyright (c) 2020 MageVision (https://www.magevision.com)
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="MageVision_Blog67">
+        <sequence>
+            <module name="Magento_OfflinePayments"/>
+        </sequence>
+    </module>
+</config>

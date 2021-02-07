@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageVision Blog67
+ *
+ * @category    MageVision
+ * @package     MageVision_Blog67
+ * @author      MageVision Team
+ * @copyright   Copyright (c) 2020 MageVision (https://www.magevision.com)
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment" translate="label" type="text" sortOrder="400" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="checkmo" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="logo" translate="label" type="image" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Logo</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">payments/logo</upload_dir>
+                    <base_url type="media" scope_info="1">payments/logo</base_url>
+                </field>
+                <field id="display_logo_title" translate="label" type="select" sortOrder="16" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Title next to Logo</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
