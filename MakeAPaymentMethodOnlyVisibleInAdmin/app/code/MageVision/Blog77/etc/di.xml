@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageVision Blog77
+ *
+ * @category     MageVision
+ * @package      MageVision_Blog77
+ * @author       MageVision Team
+ * @copyright    Copyright (c) 2022 MageVision (https://www.magevision.com)
+ * @license      http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\OfflinePayments\Model\Checkmo">
+        <plugin name="magevision_blog77_offlinepayments_checkmo_not_visible_checkout" type="MageVision\Blog77\Plugin\OfflinePayments\Model\CheckmoPlugin"/>
+    </type>
+
+</config>
