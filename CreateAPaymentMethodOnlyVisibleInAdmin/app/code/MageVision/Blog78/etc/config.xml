@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageVision Blog78
+ *
+ * @category     MageVision
+ * @package      MageVision_Blog78
+ * @author       MageVision Team
+ * @copyright    Copyright (c) 2022 MageVision (https://www.magevision.com)
+ * @license      http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <admin_only>
+                <active>1</active>
+                <title>Admin Payment Only</title>
+                <order_status>pending</order_status>
+                <allowspecific>0</allowspecific>
+                <can_use_internal>1</can_use_internal>
+                <can_use_checkout>0</can_use_checkout>
+                <is_offline>1</is_offline>
+                <model>MageVision\Blog78\Model\AdminOnly</model>
+                <group>offline</group>
+            </admin_only>
+        </payment>
+    </default>
+</config>
