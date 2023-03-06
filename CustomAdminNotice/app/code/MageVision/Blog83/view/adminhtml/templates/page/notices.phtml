@@ -1,0 +1,38 @@
+<?php
+/**
+ * MageVision Blog83
+ *
+ * @category     MageVision
+ * @package      MageVision_Blog83
+ * @author       MageVision Team
+ * @copyright    Copyright (c) 2023 MageVision (https://www.magevision.com)
+ * @license      http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<?php
+/**
+ * @see \Magento\Backend\Block\Page\Notices
+ */
+?>
+<?php if ($block->displayNoscriptNotice()) : ?>
+    <noscript>
+        <div class="messages">
+            <div class="message message-warning message-noscript">
+                <strong><?= $block->escapeHtml(__('JavaScript may be disabled in your browser.')) ?></strong>
+                <?= $block->escapeHtml(__('To use this website you must first enable JavaScript in your browser.')) ?>
+            </div>
+        </div>
+    </noscript>
+<?php endif; ?>
+<?php if ($block->displayDemoNotice()) : ?>
+    <div class="messages">
+        <div class="message message-warning message-demo-mode">
+            <?= $block->escapeHtml(__('This is only a demo store. You can browse and place orders, but nothing will be processed.')) ?>
+        </div>
+    </div>
+<?php endif; ?>
+<div class="messages">
+    <div class="message message-warning">
+        <?= $block->escapeHtml(__('This is a custom admin notice')) ?>
+    </div>
+</div>

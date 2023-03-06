@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageVision Blog83
+ *
+ * @category     MageVision
+ * @package      MageVision_Blog83
+ * @author       MageVision Team
+ * @copyright    Copyright (c) 2023 MageVision (https://www.magevision.com)
+ * @license      http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="global_notices">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">MageVision_Blog83::page/notices.phtml</argument>
+            </action>
+        </referenceBlock>
+    </body>
+</page>
