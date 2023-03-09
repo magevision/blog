@@ -1,5 +1,5 @@
 # MageVision Blog
-Example modules related to our [blog](https://www.magevision.com/blog/) posts.
+Example modules related to our [blog](https://www.magevision.com/blog/) posts about Magento 2.
 
 Help us to spend more time on free open source extensions and blog posts.
 
