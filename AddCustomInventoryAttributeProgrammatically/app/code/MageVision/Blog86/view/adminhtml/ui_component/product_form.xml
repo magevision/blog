@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <modal name="advanced_inventory_modal" provider="product_form.product_form_data_source">
+        <fieldset name="stock_data">
+            <container name="magevision_container_manage_stock" component="Magento_Ui/js/form/components/group" sortOrder="2000">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="formElement" xsi:type="string">container</item>
+                        <item name="dataScope" xsi:type="string">stock_data</item>
+                    </item>
+                </argument>
+                <field name="coming_soon" sortOrder="10" formElement="select">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="rawOptions" xsi:type="boolean">true</item>
+                            <item name="value" xsi:type="number">0</item>
+                        </item>
+                    </argument>
+                    <settings>
+                        <scopeLabel>[GLOBAL]</scopeLabel>
+                        <label translate="true">Coming Soon</label>
+                        <dataScope>coming_soon</dataScope>
+                    </settings>
+                    <formElements>
+                        <select>
+                            <settings>
+                                <options class="Magento\Config\Model\Config\Source\Yesno"/>
+                            </settings>
+                        </select>
+                    </formElements>
+                </field>
+            </container>
+        </fieldset>
+    </modal>
+</form>
