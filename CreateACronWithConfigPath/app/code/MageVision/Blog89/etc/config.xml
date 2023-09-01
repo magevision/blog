@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageVision Blog89
+ *
+ * @category     MageVision
+ * @package      MageVision_Blog89
+ * @author       MageVision Team
+ * @copyright    Copyright (c) 2023 MageVision (https://www.magevision.com)
+ * @license      http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <blog89>
+            <post>
+                <enabled>0</enabled>
+            </post>
+        </blog89>
+    </default>
+</config>
