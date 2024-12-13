@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageVision Blog92
+ *
+ * @category     MageVision
+ * @package      MageVision_Blog92
+ * @author       MageVision Team
+ * @copyright    Copyright (c) 2024 MageVision (https://www.magevision.com)
+ * @license      http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="magevision_export_csv" xsi:type="object">MageVision\Blog92\Console\Command\ExportCommand</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="MageVision\Blog92\Console\Command\ExportCommand">
+        <arguments>
+            <argument name="name" xsi:type="string">magevision:blog92:export-csv</argument>
+        </arguments>
+    </type>
+</config>
